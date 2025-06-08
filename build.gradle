@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+    id 'androidx.navigation.safeargs'
+}
+android {
+    namespace 'com.example.waterreminder'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.example.waterreminder"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+configurations.all {
+    resolutionStrategy {
+        force "org.jetbrains.kotlin:kotlin-stdlib:1.8.10"
+        force "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10"
+        force "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10"
+    }
+}
+
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Room
+    implementation "androidx.room:room-runtime:2.5.1"
+    annotationProcessor "androidx.room:room-compiler:2.5.1"
+
+    // MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-runtime:2.6.1"
+
+    implementation 'com.google.android.material:material:1.9.0'
+
+    // Gson
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Navigation Component
+    implementation 'androidx.navigation:navigation-fragment:2.7.7'
+    implementation 'androidx.navigation:navigation-ui:2.7.7'
+}

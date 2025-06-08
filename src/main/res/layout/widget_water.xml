@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#AAFFFFFF">
+
+    <TextView
+        android:id="@+id/tvDrinkCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今日已喝水 0 次"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btnDrinkWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="喝一杯"
+        android:layout_below="@id/tvDrinkCount"
+        android:layout_marginTop="8dp"/>
+</RelativeLayout>
+

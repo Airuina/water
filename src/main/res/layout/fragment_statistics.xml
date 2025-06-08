@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:id="@+id/chart_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/drink_detail_container"
+        app:layout_constraintHeight_percent="0.5"/>
+
+    <LinearLayout
+        android:id="@+id/drink_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/chart_container"
+        app:layout_constraintBottom_toTopOf="@id/stats_container">
+
+        <!-- 白水 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_water"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="白水"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"/>
+            <TextView
+                android:id="@+id/tv_water_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0 ml [0%]"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:gravity="end"/>
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progress_water"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="0"
+            android:max="100"
+            android:progressTint="@color/blue"/>
+
+        <!-- 咖啡 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_coffee"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="咖啡"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"/>
+            <TextView
+                android:id="@+id/tv_coffee_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0 ml [0%]"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:gravity="end"/>
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progress_coffee"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="0"
+            android:max="100"
+            android:progressTint="@color/brown"/>
+
+        <!-- 茶 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_tea"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="茶"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"/>
+            <TextView
+                android:id="@+id/tv_tea_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0 ml [0%]"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:gravity="end"/>
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progress_tea"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="0"
+            android:max="100"
+            android:progressTint="@color/green"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stats_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_total_drinks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:text="本月总计：0 次"/>
+
+        <TextView
+            android:id="@+id/tv_avg_interval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:text="平均间隔：0 分钟"/>
+
+        <TextView
+            android:id="@+id/tv_consecutive_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:text="连续达标：0 天"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout> 

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">喝水提醒</string>
+    <string name="drink_water">喝一杯</string>
+    <string name="today_drink_count">今日已喝水 %1$d 次</string>
+    <string name="reminder_notification_title">喝水提醒</string>
+    <string name="reminder_notification_text">该喝水啦！保持健康，记得多喝水哦~</string>
+    <string name="service_running">喝水提醒服务运行中</string>
+    <string name="service_running_text">服务正在后台提醒你喝水</string>
+    <string name="settings_title">设置</string>
+    <string name="setting_reminder_interval">提醒间隔（分钟）</string>
+    <string name="setting_drink_goal">每日喝水目标（次）</string>
+    <string name="button_save">保存</string>
+    <string name="chart_title">近7天喝水统计</string>
+    <string name="export_csv">导出CSV</string>
+    <string name="export_pdf">导出PDF</string>
+    <string name="goal_achieved">恭喜！你已达成今日喝水目标！</string>
+</resources>
